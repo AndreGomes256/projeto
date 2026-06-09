@@ -1,0 +1,341 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:#0f0f16;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.5),
+rgba(0,0,0,.7)),
+url("foto3.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:800px;
+padding:30px;
+}
+
+.hero h1{
+font-family:'Dancing Script',cursive;
+font-size:5rem;
+color:#ffb7c5;
+}
+
+.hero p{
+margin:20px 0;
+font-size:1.2rem;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+background:#ff4f81;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.5rem;
+color:#ffb7c5;
+}
+
+#contador{
+font-size:2rem;
+text-align:center;
+font-weight:bold;
+}
+
+.carta-box{
+max-width:800px;
+margin:auto;
+line-height:2;
+background:rgba(255,255,255,.05);
+padding:40px;
+border-radius:20px;
+}
+
+.fotos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.foto img{
+width:100%;
+height:auto;
+aspect-ratio:3/4;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+display:block;
+}
+
+.foto img:hover{
+transform:scale(1.05);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+padding:25px;
+background:rgba(255,255,255,.05);
+border-radius:15px;
+text-align:center;
+}
+
+.gamer-box{
+max-width:800px;
+margin:auto;
+text-align:center;
+line-height:2;
+font-size:1.2rem;
+}
+
+.surpresa{
+text-align:center;
+}
+
+#mensagemSecreta{
+display:none;
+margin-top:30px;
+font-size:1.5rem;
+color:#ffb7c5;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:black;
+}
+
+#hearts-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:999;
+}
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:fall linear forwards;
+opacity:.8;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-100px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+.gamer{
+background:linear-gradient(
+135deg,
+#131722,
+#1d2130
+);
+}
+
+.gamer-card{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.level-box{
+background:rgba(255,255,255,.06);
+padding:25px;
+border-radius:20px;
+min-width:250px;
+text-align:center;
+backdrop-filter:blur(8px);
+}
+
+.level-box h3{
+color:#ffb7c5;
+margin-bottom:10px;
+}
+
+.heart-level{
+font-size:3rem;
+animation:pulse 1.5s infinite;
+}
+
+.quest-box{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.achievement{
+margin-top:30px;
+padding:20px;
+background:rgba(255,183,197,.15);
+border-radius:20px;
+font-size:1.2rem;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+/* =========================
+   RESPONSIVIDADE MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    .hero{
+        padding:20px;
+        height:100vh;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    #contador{
+        font-size:1.4rem;
+        line-height:1.6;
+    }
+
+    .carta-box{
+        padding:25px;
+    }
+
+    .foto img{
+        height:350px;
+    }
+
+    .gamer-card{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .level-box{
+        width:100%;
+        min-width:unset;
+    }
+
+    button{
+        width:100%;
+        max-width:300px;
+    }
+
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 480px){
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero p{
+        font-size:.95rem;
+    }
+
+    h2{
+        font-size:1.7rem;
+    }
+
+    .foto img{
+        height:280px;
+    }
+
+    .carta-box{
+        font-size:.95rem;
+    }
+
+    #contador{
+        font-size:1.2rem;
+    }
+
+}
+ #intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#0f0f16;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
